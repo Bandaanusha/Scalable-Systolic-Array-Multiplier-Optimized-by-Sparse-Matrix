@@ -15,3 +15,5 @@ Systolic arrays are hardware structures built for fast and efficient operation o
 ## Proposed Systolic Array Circuit
 
 <img width="413" alt="prop_sys" src="https://user-images.githubusercontent.com/62790565/231378627-911d48df-6139-4c0d-b587-f5bce096ba1f.png">
+
+## Computation Unit
