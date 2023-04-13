@@ -9,7 +9,6 @@ In output stationary architecture, the results stay and the inputs and weights m
 In weight-stationary architecture, the weights are pre-loaded into the computation units and the activations are marched in from the activation storage buffer.The weights stay stationary and the inputs are streamed in.
 ### Input Stationary Systolic Array
 In Input-stationary architecture, the Inputs are pre-loaded into the computation units and the activations are marched in from the activation storage buffer.The inputs stay stationary and the weights are streamed in. 
-## Sparse Matrix
 
 ## Traditional Sysytolic Array Structure
 
