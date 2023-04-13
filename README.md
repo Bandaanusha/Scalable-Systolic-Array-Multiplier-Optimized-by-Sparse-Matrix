@@ -19,4 +19,3 @@ In Input-stationary architecture, the Inputs are pre-loaded into the computation
 
 <img width="413" alt="prop_sys" src="https://user-images.githubusercontent.com/62790565/231378627-911d48df-6139-4c0d-b587-f5bce096ba1f.png">
 
-## Computation Unit
