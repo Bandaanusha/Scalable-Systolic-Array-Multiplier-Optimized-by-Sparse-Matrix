@@ -14,9 +14,14 @@ In Input-stationary architecture, the Inputs are pre-loaded into the computation
 
 ## Traditional Sysytolic Array Structure
 
+Matrix1 (M1) represents the multiplier matrix, and M1 (m, n) represents the data in the m-th row and n-th column of the multiplier matrix M1. Matrix2 (M2) has the same representation as M1. Multiplier (MUL) stands for the multiplier unit, which can multiply the input data and output the result. Register (REG) represents the register delay module, which is used for the systolic data pulse in this structure. Output_colum1 (OUT_col1) represents the output popped by the pipeline in the first column. The traditional systolic array structure has a pulsation register between adjacent columns to ensure that the timing of the pipeline calculation results of each column is ordered. The structure we proposed removes the delay registers between the columns and instead connects the input matrix multiplier in the same row.
+
 <img width="411" alt="trad_sys" src="https://user-images.githubusercontent.com/62790565/231377915-721fb2e0-b571-447d-96cb-5566a283bdb0.png">
 
 ## **Proposed Systolic Array Structure (State-of-the-Art)**
+
+As there is a “0” value in Matrix2’s elements. The structure cannot recognize the situation of elements’ value is “0” without the sparse matrix optimization Compute Unit. It will transport the output data to port S_OUT normally. Compared to that, the structure that we proposed will judge the element firstly. Then, the Compute Unit will change the calculation path to the output. Therefore, our sparse optimized circuit can reduce the transmission delay when the input element is “0”. We have declared before that zero elements are commonly consist in a sparse matrix, which makes zeroelements optimization is very important. In another situation. When the input elements are not “0”. The Computing Unit would act like a normal multiplier calculator. The output of sparse-optimized circuit S_OUT
+should output logic “1”, which cannot influence the final output of CU.
 
 <img width="413" alt="prop_sys" src="https://user-images.githubusercontent.com/62790565/231378627-911d48df-6139-4c0d-b587-f5bce096ba1f.png">
 
